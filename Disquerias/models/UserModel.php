@@ -66,10 +66,11 @@ class UserModel {
 
 
     public function getUserByUsername($username) {
-        $query = "SELECT * FROM usuarios WHERE username = ?"; // Cambiado nombre_usuario a username
+        $query = "SELECT * FROM usuarios WHERE username = ?";
         $stmt = $this->db->prepare($query);
         $stmt->execute([$username]);
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 }
+
 ?>
