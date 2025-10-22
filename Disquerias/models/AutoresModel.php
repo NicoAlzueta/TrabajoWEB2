@@ -89,6 +89,6 @@ class AutoresModel {
     public function delete($id) {
         $query = $this->db->prepare("DELETE FROM autores WHERE ID_autor = ?");
         $query->execute([$id]);
-        // Podrías retornar $query->rowCount();
     }
+
 }
