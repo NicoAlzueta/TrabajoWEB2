@@ -98,8 +98,7 @@ class AlbumController {
              try {
                 $this->albumModel->deleteAlbum($id);
              } catch (PDOException $e) {
-                 // Manejar posible error si existe alguna restricción futura, aunque con Cascade debería funcionar
-                 // Por ahora, solo redirigimos, pero podríamos loguear el error $e->getMessage()
+                 
              }
         }
         header('Location: ' . BASE_URL . '/admin/albumes');
@@ -111,4 +110,5 @@ class AlbumController {
         $this->view->showNotFound();
     }
 }
+
 ?>
